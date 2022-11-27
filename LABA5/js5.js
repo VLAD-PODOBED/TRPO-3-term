@@ -23,7 +23,7 @@ sandals:  {
   number: 6, 
   size: 45, 
   color: "зеленый", 
-  price:"300$" ,
+  price:"400$" ,
   discount : "200$",
   final_cost: "",
   //task 5
@@ -84,7 +84,7 @@ let result = {};
 for (i in product.shoes) {
   let filter = product.shoes[i]
   // Ниже условие фильтрации
-  if (filter.size === 45 || filter.price === '300$' || filter.color ==='зеленый') {
+  if (filter.size > 64 || filter.price === '400$' || filter.color ==='зеленый') {
     result[i] = filter
   }
 }
@@ -100,6 +100,16 @@ var boots = new Object ({
   color: "чёрный", 
   price:"800$"
 });
+
+Object.defineProperty(boots,'naga',{
+value: boots.number,
+//configurable:true,
+writable:false
+});
+
+// delete boots.niga;
+// boots.niga =10;
+console.log(boots.naga);
 
 var sneakers = new Object ({
   category: "Обувь", 
