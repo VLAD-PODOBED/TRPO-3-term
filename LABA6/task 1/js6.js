@@ -10,8 +10,8 @@ var triangle = canvas2.getContext('2d');
 
 let RECT ={
 R:rect.fillStyle = 'yellow',
-R:rect.fillRect(100, 25,100, 100),
-R:rect.fill(),
+R2:rect.fillRect(100, 25,100, 100),
+R3:rect.fill(),
 };
 
 let CIRCLE ={
@@ -62,7 +62,9 @@ let TRIANGLE2 = Object.create(Object.getPrototypeOf(TRIANGLE), Object.getOwnProp
    triangle.lineTo(410,225),
    triangle.stroke());
 
-console.log(style.widthX,style.widthY);
-console.log(style.backround);
+   for (let prop in RECT) {
+      console.log(RECT[prop]);
+   }
+console.log("зеленый круг(цвет):",style.backround);
 console.log("Координаты центральной линии:" + "(",style.lineTo1_1,":",150,")",";","(",style.lineTo1_1,":",style.lineTo1_2,")",style.lineTo2_1,style.lineTo2_2,style.lineTo2_3);
 }
