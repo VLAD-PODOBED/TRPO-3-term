@@ -197,8 +197,7 @@ input[name="tabs"] {
  transition: .5s;
  pointer-events: none;
 }
-.box-input input:focus ~ label,
-.box-input input:valid ~ label {
+.box-input input:focus ~ label {
  top: -20px;
  font-size: 12px;
  color: #33d3fe;
